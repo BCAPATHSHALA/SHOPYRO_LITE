@@ -1,103 +1,162 @@
+import { PageLayout } from "@/components/layout/page-layout";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, Star, Truck, Shield, Headphones } from "lucide-react";
 
-export default function Home() {
+import { getFeaturedProducts } from "@/lib/shopify";
+import { ProductCard } from "./shop/components/product-card";
+
+export default async function Home() {
+  const featuredProducts = await getFeaturedProducts();
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <PageLayout>
+      <div className="min-h-screen">
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5" />
+          <Image
+            src="/modern-furniture-showroom.webp"
+            alt="Hero background"
+            fill
+            className="object-cover -z-10 opacity-35"
+            priority
+          />
+          <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <Badge
+              variant="outline"
+              className="mb-6 bg-background/80 backdrop-blur-sm"
+            >
+              New Collection Available
+            </Badge>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-6">
+              Transform Your Space with{" "}
+              <span className="text-primary">Premium Furniture</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
+              Discover our curated collection of modern, sustainable furniture
+              designed to elevate your home and lifestyle.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8" asChild>
+                <Link href="/shop">
+                  Shop Collection <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 bg-transparent"
+              >
+                <Link href="/shop">View Catalog</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Truck className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Free Shipping</h3>
+                <p className="text-sm text-muted-foreground">
+                  On orders over $299
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Quality Guarantee</h3>
+                <p className="text-sm text-muted-foreground">
+                  Premium materials only
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Headphones className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">24/7 Support</h3>
+                <p className="text-sm text-muted-foreground">
+                  Expert customer service
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">5-Star Rated</h3>
+                <p className="text-sm text-muted-foreground">
+                  Trusted by thousands
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {featuredProducts && (
+          <section className="py-20 bg-background">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Featured Products
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  Hand-picked favorites from our latest collection.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {featuredProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+
+              <div className="text-center mt-12">
+                <Button size="lg" asChild>
+                  <Link href="/shop">
+                    View Full Collection <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="relative py-24 bg-gradient-to-r from-primary/80 to-primary/60 text-primary-foreground overflow-hidden">
+          {/* Decorative background shapes */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute top-0 left-1/2 w-[400px] h-[400px] bg-secondary/20 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] bg-accent/20 rounded-full translate-x-1/2 translate-y-1/2 animate-pulse"></div>
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center px-6">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              Ready to Transform Your Space?
+            </h2>
+            <p className="text-lg md:text-xl mb-10 text-primary-foreground/90 leading-relaxed">
+              Join thousands of satisfied customers who have elevated their
+              homes with our premium furniture collection. Make your space
+              reflect your style.
+            </p>
+            <Button
+              size="lg"
+              className="text-lg px-10 py-4 transition-transform hover:scale-105"
+              asChild
+            >
+              <Link
+                href="/shop"
+                className="flex items-center justify-center gap-2"
+              >
+                Start Shopping <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+      </div>
+    </PageLayout>
   );
 }
