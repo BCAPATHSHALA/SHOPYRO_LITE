@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getCollection, getCollections } from "@/lib/shopify";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME } from "@/siteconfig/site.config"; 
 import { notFound } from "next/navigation";
 import ProductList from "../components/product-list";
 

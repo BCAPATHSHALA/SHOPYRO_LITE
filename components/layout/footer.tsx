@@ -2,9 +2,10 @@ import Link from "next/link";
 import {
   FOOTER_LINKS,
   SITE_NAME,
+  SITE_SETTINGS,
   SITE_TAGLINE,
   SOCIAL_LINKS,
-} from "@/lib/constants";
+} from "@/siteconfig/site.config";
 
 export function Footer() {
   return (
@@ -74,27 +75,18 @@ export function Footer() {
               © {2025} {SITE_NAME}, powered by Websyro. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link
-                href="/terms"
-                className="hover:underline underline-offset-4"
-                prefetch
-              >
-                Terms
-              </Link>
-              <Link
-                href="/privacy"
-                className="hover:underline underline-offset-4"
-                prefetch
-              >
-                Privacy
-              </Link>
-              <Link
-                href="/sitemap.xml"
-                className="hover:underline underline-offset-4"
-                prefetch
-              >
-                Sitemap
-              </Link>
+              {SITE_SETTINGS.links.map((item) => {
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="hover:underline underline-offset-4"
+                    prefetch
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

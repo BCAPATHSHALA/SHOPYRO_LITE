@@ -1,7 +1,7 @@
 import { storeCatalog } from "@/lib/shopify/constants";
 import ProductList from "./components/product-list";
 import { Metadata } from "next";
-import { SITE_NAME, SITE_TAGLINE } from "@/lib/constants";
+import { SITE_NAME, SITE_TAGLINE } from "@/siteconfig/site.config"; 
 import { Suspense } from "react";
 import ResultsControls from "./components/results-controls";
 import { ProductGrid } from "./components/product-grid";

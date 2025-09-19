@@ -1,58 +1,7 @@
-import { NavItem } from "./types";
-
-export const CONTACT_LINKS: NavItem[] = [
-  { label: "Mobile", href: "https://x.com" },
-  { label: "Location", href: "https://instagram.com" },
-  { label: "Facebook", href: "https://facebook.com" },
-];
-
 export const HIDDEN_PRODUCT_TAG = "nextjs-frontend-hidden";
 export const DEFAULT_OPTION = "Default Title";
 
 export const isDevelopment = process.env.NODE_ENV === "development";
-
-// Site-wide branding
-export const SITE_NAME = "Shopyro";
-export const SITE_TAGLINE = `${SITE_NAME}, your one-stop shop for all your needs.`;
-
-// One-stop site settings for selling/customization purposes
-export const SITE_SETTINGS = {
-  name: SITE_NAME,
-  tagline: SITE_TAGLINE,
-  logoAlt: `${SITE_NAME} logo`,
-  companyEmail: "hello@websyro.app",
-  companyPhone: "+91-9191-9191-91",
-  copyrightName: SITE_NAME,
-  links: {
-    terms: "/terms",
-    privacy: "/privacy",
-    contact: "/contact",
-    about: "/about",
-    sitemap: "/sitemap.xml",
-  },
-} as const;
-
-// Footer configuration (easy to customize)
-export type SimpleLink = { label: string; href: string };
-export const SOCIAL_LINKS: SimpleLink[] = [
-  { label: "Twitter", href: "https://x.com" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "Facebook", href: "https://facebook.com" },
-];
-
-export const FOOTER_LINKS: { title: string; links: SimpleLink[] }[] = [
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Quick Links",
-    links: [{ label: "Shop", href: "/shop" }],
-  },
-];
 
 // Internal color mapping for common color names to hex values
 export const COLOR_MAP: Record<string, string> = {

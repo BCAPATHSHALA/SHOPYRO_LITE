@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /* 
-* @theme {}: creates global CSS variables that utility classes reference.
-* @theme inline {}: inlines the resolved values of theme variables directly into utility classes, especially useful when referencing other variables to ensure correct resolution. 
+* @theme {} creates global CSS variables that utility classes reference.
+* @theme inline {} inlines the resolved values of theme variables directly into utility classes, especially useful when referencing other variables to ensure correct resolution. 
 */
 
 @theme inline {

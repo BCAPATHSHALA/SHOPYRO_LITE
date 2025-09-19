@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import CartModal from "@/components/cart/modal";
 import type { NavItem } from "@/lib/types";
 import type { Collection } from "@/lib/shopify/types";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME } from "@/siteconfig/site.config"; 
 import { SearchBar } from "./search-bar";
 
 export const navItems: NavItem[] = [

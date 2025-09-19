@@ -1,4 +1,4 @@
-import { CONTACT_LINKS } from "@/lib/constants";
+import { CONTACT_LINKS } from "@/siteconfig/site.config"; 
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
