@@ -19,7 +19,7 @@ export default async function Home() {
             src="/modern-furniture-showroom.webp"
             alt="Hero background"
             fill
-            className="object-cover -z-10 opacity-35"
+            className="object-cover -z-10 opacity-55 blur-xs"
             priority
           />
           <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
