@@ -19,8 +19,19 @@ export const navItems: NavItem[] = [
     label: "shop all",
     href: "/shop",
   },
-];
-
+  {
+    label: "about",
+    href: "/about",
+  },
+  {
+    label: "contact",
+    href: "/contact",
+  },
+  {
+    label: "faq",
+    href: "/faq",
+  },
+]
 interface HeaderProps {
   collections: Collection[];
 }
