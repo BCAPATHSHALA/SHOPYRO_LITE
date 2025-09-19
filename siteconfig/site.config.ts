@@ -10,8 +10,10 @@ export const SITE_SETTINGS = {
   companyPhone: "+91-9191-9191-91",
   copyrightName: SITE_NAME,
   links: [
-    { label: "Privacy", href: "/privacy" },
-    { label: "Terms", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Conditions", href: "/terms-conditions" },
+    { label: "Return Policy", href: "/return-policy" },
+    { label: "Refund Policy", href: "/refund-policy" },
     { label: "Sitemap", href: "/sitemap.xml" },
   ],
 } as const;
@@ -34,10 +36,22 @@ export const FOOTER_LINKS: { title: string; links: SimpleLink[] }[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {
     title: "Quick Links",
-    links: [{ label: "Shop", href: "/shop" }],
+    links: [
+      { label: "Shop", href: "/shop" },
+      { label: "Return Policy", href: "/return-policy" },
+      { label: "Refund Policy", href: "/refund-policy" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms-conditions" },
+    ],
   },
 ];
