@@ -1,7 +1,8 @@
 {
   "name": "shopyro-lite",
   "version": "0.1.0",
-  "description": "A modern, headless Shopify starter template built with Next.js, TypeScript, and Tailwind CSS. Perfect for merchants looking to build high-performance e-commerce stores.",
+  "displayName": "Shopyro Lite – Headless Shopify Starter by Websyro Agency",
+  "description": "A sleek, headless Shopify starter built with Next.js, TypeScript, and Tailwind CSS. Perfect for merchants who want fast, scalable, and fully customizable e-commerce stores.",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
