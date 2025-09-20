@@ -4,7 +4,7 @@
  */
 
 export const SEO_CONFIG = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://shopyro.websyro.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   defaultLocale: "en",
   locales: ["en"],
 };
