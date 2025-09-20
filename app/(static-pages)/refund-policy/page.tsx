@@ -2,18 +2,9 @@ import { PageLayout } from "@/components/layout/page-layout";
 import { HeroSection } from "@/components/static-pages/organisms/hero-section";
 import { PolicySection } from "@/components/static-pages/molecules/policy-section";
 import { REFUND_POLICY_CONTENT } from "@/siteconfig/static-pages.config";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "Refund Policy - Shopyro",
-  description:
-    "Understand Shopyro's refund policy, including processing times, refund amounts, and special circumstances.",
-  openGraph: {
-    title: "Refund Policy - Shopyro",
-    description:
-      "Understand Shopyro's refund policy, including processing times, refund amounts, and special circumstances.",
-  },
-};
+export const metadata = PAGE_METADATA.refundPolicy;
 
 export default function RefundPolicyPage() {
   const { hero, sections } = REFUND_POLICY_CONTENT;

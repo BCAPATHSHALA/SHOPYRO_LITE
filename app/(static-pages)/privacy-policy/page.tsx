@@ -2,18 +2,9 @@ import { PageLayout } from "@/components/layout/page-layout";
 import { HeroSection } from "@/components/static-pages/organisms/hero-section";
 import { PolicySection } from "@/components/static-pages/molecules/policy-section";
 import { PRIVACY_POLICY_CONTENT } from "@/siteconfig/static-pages.config";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - Shopyro",
-  description:
-    "Read Shopyro's privacy policy to understand how we collect, use, and protect your personal information.",
-  openGraph: {
-    title: "Privacy Policy - Shopyro",
-    description:
-      "Read Shopyro's privacy policy to understand how we collect, use, and protect your personal information.",
-  },
-};
+export const metadata = PAGE_METADATA.privacyPolicy;
 
 export default function PrivacyPolicyPage() {
   const { lastUpdated, sections } = PRIVACY_POLICY_CONTENT;

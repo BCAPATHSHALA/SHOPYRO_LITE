@@ -4,18 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { RETURN_POLICY_CONTENT } from "@/siteconfig/static-pages.config";
 import { CheckCircle, XCircle } from "lucide-react";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "Return Policy - Shopyro",
-  description:
-    "Learn about Shopyro's return policy, including timeframes, conditions, and the return process.",
-  openGraph: {
-    title: "Return Policy - Shopyro",
-    description:
-      "Learn about Shopyro's return policy, including timeframes, conditions, and the return process.",
-  },
-};
+export const metadata = PAGE_METADATA.returnPolicy;
 
 export default function ReturnPolicyPage() {
   const { hero, policy, process, exceptions } = RETURN_POLICY_CONTENT;

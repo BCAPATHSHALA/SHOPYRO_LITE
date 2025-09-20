@@ -4,18 +4,9 @@ import { ContactMethod } from "@/components/static-pages/molecules/contact-metho
 import { ContactForm } from "@/components/static-pages/organisms/contact-form";
 import { CONTACT_PAGE_CONTENT } from "@/siteconfig/static-pages.config";
 import { Mail, Phone, MapPin } from "lucide-react";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "Contact Us - Shopyro",
-  description:
-    "Get in touch with Shopyro. We're here to help with any questions about our furniture collection or your order.",
-  openGraph: {
-    title: "Contact Us - Shopyro",
-    description:
-      "Get in touch with Shopyro. We're here to help with any questions about our furniture collection or your order.",
-  },
-};
+export const metadata = PAGE_METADATA.contact
 
 const iconMap = {
   Mail,

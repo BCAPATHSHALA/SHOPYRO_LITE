@@ -2,18 +2,9 @@ import { PageLayout } from "@/components/layout/page-layout";
 import { HeroSection } from "@/components/static-pages/organisms/hero-section";
 import { PolicySection } from "@/components/static-pages/molecules/policy-section";
 import { TERMS_CONDITIONS_CONTENT } from "@/siteconfig/static-pages.config";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions - Shopyro",
-  description:
-    "Read Shopyro's terms and conditions for using our website and purchasing our furniture products.",
-  openGraph: {
-    title: "Terms & Conditions - Shopyro",
-    description:
-      "Read Shopyro's terms and conditions for using our website and purchasing our furniture products.",
-  },
-};
+export const metadata = PAGE_METADATA.termsConditions;
 
 export default function TermsConditionsPage() {
   const { lastUpdated, sections } = TERMS_CONDITIONS_CONTENT;

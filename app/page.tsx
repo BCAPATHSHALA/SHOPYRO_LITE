@@ -7,6 +7,9 @@ import { ArrowRight, Star, Truck, Shield, Headphones } from "lucide-react";
 
 import { getFeaturedProducts } from "@/lib/shopify";
 import { ProductCard } from "./shop/components/product-card";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
+
+export const metadata = PAGE_METADATA.home;
 
 export default async function Home() {
   const featuredProducts = await getFeaturedProducts();

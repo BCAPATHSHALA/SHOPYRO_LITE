@@ -3,18 +3,9 @@ import { HeroSection } from "@/components/static-pages/organisms/hero-section";
 import { FAQItem } from "@/components/static-pages/molecules/faq-item";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQ_CONTENT } from "@/siteconfig/static-pages.config";
-import type { Metadata } from "next";
+import { PAGE_METADATA } from "@/siteconfig/seo.config";
 
-export const metadata: Metadata = {
-  title: "FAQ - Shopyro",
-  description:
-    "Find answers to frequently asked questions about Shopyro's furniture, shipping, returns, and more.",
-  openGraph: {
-    title: "FAQ - Shopyro",
-    description:
-      "Find answers to frequently asked questions about Shopyro's furniture, shipping, returns, and more.",
-  },
-};
+export const metadata = PAGE_METADATA.faq;
 
 export default function FAQPage() {
   const { hero, categories } = FAQ_CONTENT;
