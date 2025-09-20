@@ -10,6 +10,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 [![npm](https://img.shields.io/badge/pnpm-7.31-blue?logo=pnpm)](https://pnpm.io/)
 
+![Websyro](./public/shopyro.png)
+
 Transform your Shopify store into a fast, modern headless e-commerce site with Next.js. Perfect for developers, tech-savvy entrepreneurs, or anyone wanting a custom, scalable, and responsive storefront.
 
 ## Features
