@@ -55,8 +55,6 @@
 
   /* Font Family*/
   --font-sans: var(--font-geist-sans);
-  --font-serif: "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times",
-    "serif";
   --font-mono: var(--font-geist-mono);
   --font-bangers: var(--font-bangers);
 
@@ -129,7 +127,6 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-geist-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", "monospace";
-  /* Ensured Bangers font fallback is properly configured */
   --font-bangers: "Bangers", "Impact", "Arial Black", "system-ui", "sans-serif";
 }
 
