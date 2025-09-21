@@ -4,7 +4,6 @@ import { Suspense } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import type { Collection } from "@/lib/shopify/types";
-import Link from "next/link";
 import { SidebarLinks } from "@/components/layout/sidebar/product-sidebar-links";
 import { CategoryFilter } from "./category-filter";
 import { ColorFilter } from "./color-filter";
@@ -45,28 +44,32 @@ export function DesktopFilters({
   return (
     <aside
       className={cn(
-        "grid sticky top-0 grid-cols-3 max-h-screen pl-sides pt-top-spacing pb-4 z-10 bg-background",
+        "flex flex-col sticky top-0 max-h-screen bg-background border-r border-border/50",
+        "pt-6 pb-4 px-4 z-10 min-w-[280px] max-w-[320px]",
         className
       )}
     >
-      <div className="flex flex-col col-span-3 xl:col-span-2 gap-5 overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted-foreground/20 hover:scrollbar-thumb-muted-foreground/40 pr-2">
-        <div className="flex justify-between items-baseline pl-2 -mb-1">
-          <h2 className="text-2xl font-semibold text-foreground">
-            Filter{" "}
-            {filterCount > 0 && (
-              <span className="text-muted-foreground">({filterCount})</span>
-            )}
-          </h2>
-          <Button
-            size={"sm"}
-            variant="ghost"
-            aria-label="Clear all filters"
-            className="font-medium text-muted-foreground hover:text-foreground transition-colors"
-            onClick={handleClearAll}
-          >
-            Clear All
-          </Button>
-        </div>
+      <div className="flex justify-between items-center mb-6 pb-3 border-b border-border/30">
+        <h2 className="text-xl font-semibold text-foreground flex items-center gap-2">
+          Filter
+          {filterCount > 0 && (
+            <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-medium bg-primary text-primary-foreground rounded-full">
+              {filterCount}
+            </span>
+          )}
+        </h2>
+        <Button
+          size="sm"
+          variant="ghost"
+          aria-label="Clear all filters"
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 h-auto"
+          onClick={handleClearAll}
+        >
+          Clear All
+        </Button>
+      </div>
+
+      <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted-foreground/20 hover:scrollbar-thumb-muted-foreground/40 pr-2 space-y-6">
         <Suspense fallback={null}>
           <CategoryFilter collections={collections} />
           <ColorFilter products={originalProducts} />
@@ -74,8 +77,8 @@ export function DesktopFilters({
         </Suspense>
       </div>
 
-      <div className="col-span-3 self-end">
-        <SidebarLinks className="flex-col-reverse py-sides" size="sm" />
+      <div className="mt-6 pt-4 border-t border-border/30">
+        <SidebarLinks className="flex flex-col gap-2" size="sm" />
       </div>
     </aside>
   );
