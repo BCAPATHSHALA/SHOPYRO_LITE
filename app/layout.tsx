@@ -12,9 +12,26 @@ import { Header } from "../components/layout/header";
 import dynamic from "next/dynamic";
 import { WebsyroProvider } from "../lib/context";
 
-import "@fontsource/bangers";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Bangers } from "next/font/google";
 
 const WebsyroSetup = dynamic(() => import("@/components/websyro-setup"));
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const bangers = Bangers({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bangers",
+});
 
 const isWebsyro =
   process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false;
@@ -30,7 +47,7 @@ export const metadata: Metadata = {
  * This is the main layout component that wraps the entire application.
  * It provides essential providers and global functionality including:
  * - Shopify e-commerce integration with cart management
- * - Font configuration with Geist Sans and Mono
+ * - Font configuration with Geist Sans, Mono, and Bangers
  * - Toast notifications for user feedback
  * - URL state management with nuqs
  * - Development debugging tools
@@ -46,7 +63,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={"antialiased min-h-screen font-sans"}
+        className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} antialiased min-h-screen font-sans`}
         suppressHydrationWarning
       >
         <WebsyroProvider isWebsyro={isWebsyro}>

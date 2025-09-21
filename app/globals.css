@@ -54,13 +54,11 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   /* Font Family*/
-  --font-sans: "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--font-geist-sans);
   --font-serif: "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times",
     "serif";
-  --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
-    "Liberation Mono", "Courier New", "monospace";
-  --font-bangers: "Bangers", "system-ui", "sans-serif";
+  --font-mono: var(--font-geist-mono);
+  --font-bangers: var(--font-bangers);
 
   /* Font Size */
   --text-xs: 0.75rem;
@@ -127,6 +125,11 @@
   --sidebar-accent-foreground: #171717;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
+  --font-geist-sans: "ui-sans-serif", "system-ui", "sans-serif",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-geist-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco",
+    "Consolas", "Liberation Mono", "Courier New", "monospace";
+  --font-bangers: "Bangers", "system-ui", "sans-serif";
 }
 
 .dark {
@@ -176,11 +179,11 @@
   .base-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--sides);
+    gap: var(--spacing-sides);
   }
 
   .base-gap {
-    gap: var(--sides);
+    gap: var(--spacing-sides);
   }
 
   .scrollbar-hide {
