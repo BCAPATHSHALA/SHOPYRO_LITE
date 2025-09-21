@@ -45,7 +45,7 @@ export function DesktopFilters({
     <aside
       className={cn(
         "flex flex-col sticky top-0 max-h-screen bg-background border-r border-border/50",
-        "pt-6 pb-4 px-4 z-10 min-w-[280px] max-w-[320px]",
+        "pt-20 pb-4 px-4 z-10 min-w-[280px] max-w-[320px]",
         className
       )}
     >

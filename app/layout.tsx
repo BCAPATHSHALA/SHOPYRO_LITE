@@ -12,8 +12,7 @@ import { Header } from "../components/layout/header";
 import dynamic from "next/dynamic";
 import { WebsyroProvider } from "../lib/context";
 
-import { Geist, Geist_Mono } from "next/font/google";
-import { Bangers } from "next/font/google";
+import { Geist, Geist_Mono, Bangers } from "next/font/google";
 
 const WebsyroSetup = dynamic(() => import("@/components/websyro-setup"));
 
@@ -25,12 +24,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
-});
-
-const bangers = Bangers({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-bangers",
 });
 
 const isWebsyro =
@@ -63,7 +56,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} antialiased min-h-screen font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen font-sans`}
         suppressHydrationWarning
       >
         <WebsyroProvider isWebsyro={isWebsyro}>
