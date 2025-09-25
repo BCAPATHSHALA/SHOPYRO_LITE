@@ -1,6 +1,5 @@
 import type React from "react";
 import type { Metadata } from "next";
-import "./globals.css";
 import { Toaster } from "sonner";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { CartProvider } from "@/components/cart/cart-context";
@@ -12,6 +11,7 @@ import { Header } from "../components/layout/header";
 import dynamic from "next/dynamic";
 import { WebsyroProvider } from "../lib/context";
 
+import "./global.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@fontsource/libre-baskerville";
 import "@fontsource-variable/quicksand";
