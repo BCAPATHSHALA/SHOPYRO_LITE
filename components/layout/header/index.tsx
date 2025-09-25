@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import CartModal from "@/components/cart/modal";
-import type { NavItem } from "@/lib/types";
+import type { NavItem } from "@/types/types";
 import type { Collection } from "@/lib/shopify/types";
 import { SITE_NAME } from "@/siteconfig/site.config"; 
 import { SearchBar } from "./search-bar";
