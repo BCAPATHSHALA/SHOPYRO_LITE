@@ -50,21 +50,13 @@ Before you begin contributing, please:
 1. **Fork and clone the repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/SHOPYRO_LITE.git
+   git clone https://github.com/BCAPATHSHALA/SHOPYRO_LITE
    cd SHOPYRO_LITE
    ```
 
 2. **Install dependencies**
 
    ```bash
-   npm install
-
-   # or
-
-   yarn install
-
-   # or
-
    pnpm install
    ```
 
@@ -74,12 +66,12 @@ Before you begin contributing, please:
    cp .env.example .env.local
    ```
 
-   Fill in your Shopify store credentials and other required variables.
+Fill in your Shopify store credentials and other required variables.
 
 4. **Start the development server**
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 5. **Open your browser**
@@ -133,19 +125,19 @@ git checkout -b fix/your-bug-fix
 
 # Run the development server
 
-npm run dev
+pnpm run dev
 
 # Run type checking
 
-npm run type-check
+pnpm run type-check
 
 # Run linting
 
-npm run lint
+pnpm run lint
 
 # Run tests (if available)
 
-npm run test
+pnpm run test
 ```
 
 ### 4. Commit Your Changes
@@ -230,14 +222,35 @@ For feature requests, please include:
 Follow the existing folder structure:
 
 ```
-├── app/ # Next.js app directory
-├── components/ # Reusable components
-│ ├── ui/ # Basic UI components
-│ ├── layout/ # Layout components
-│ └── static-pages/ # Static page components
-├── lib/ # Utility functions
-├── siteconfig/ # Configuration files
-└── types/ # TypeScript type definitions
+shopyro/
+├── app/                          # Next.js app directory
+│   ├── about/                    # About page with components
+│   ├── contact/                  # Contact page
+│   ├── faq/                      # FAQ page
+│   ├── privacy-policy/           # Privacy policy page
+│   ├── terms-conditions/         # Terms & conditions page
+│   ├── return-policy/            # Return policy page
+│   ├── refund-policy/            # Refund policy page
+│   ├── product/[handle]/         # Dynamic product pages
+│   ├── sitemap.ts               # Dynamic sitemap generation
+│   ├── robots.ts                # SEO robots.txt
+│   └── globals.css              # Global styles
+├── components/
+│   ├── layout/                  # Header, footer, navigation
+│   ├── product/                 # Product-related components
+│   ├── cart/                    # Shopping cart components
+│   ├── static-pages/            # Reusable page components
+│   │   ├── atoms/               # Basic UI elements
+│   │   ├── molecules/           # Component combinations
+│   │   └── organisms/           # Complex components
+│   └── ui/                      # shadcn/ui components
+├── siteconfig/
+│   ├── site.config.ts           # Global site configuration
+│   ├── static-pages.config.ts   # Static page content
+│   └── seo.config.ts            # SEO configuration
+├── lib/                         # Utility functions
+├── types/                       # TypeScript type definitions
+└── public/                      # Static assets
 ```
 
 ## Testing
@@ -261,6 +274,7 @@ Follow the existing folder structure:
 - **Email**: hello@websyro.com
 - **GitHub Issues**: [Report issues](https://github.com/BCAPATHSHALA/SHOPYRO_LITE/issues)
 - **Documentation**: [Full docs & setup guide](https://websyro.com/docs/shopyro)
+- **Shopyro**: [Support & services](https://shopyro.websyro.com)
 
 ### Stay Connected
 

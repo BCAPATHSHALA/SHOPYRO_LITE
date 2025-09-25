@@ -14,6 +14,8 @@
 
 Transform your Shopify store into a fast, modern headless e-commerce site with Next.js. Perfect for developers, tech-savvy entrepreneurs, or anyone wanting a custom, scalable, and responsive storefront.
 
+### **💎 Support & services**: [Shopyro](https://shopyro.websyro.com)
+
 ## Features
 
 - **Next.js + Shopify**: Headless storefront with modern architecture
@@ -44,8 +46,8 @@ Transform your Shopify store into a fast, modern headless e-commerce site with N
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/your-username/shopyro.git
-cd shopyro
+git clone https://github.com/BCAPATHSHALA/SHOPYRO_LITE.git
+cd SHOPYRO_LITE
 pnpm install
 ```
 
@@ -99,7 +101,7 @@ NEXT_PUBLIC_SITE_URL="https://your-hosted-site.com"
 ### 4. Run Development Server
 
 ```bash
-pnpm dev
+pnpm run dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to see your store!
@@ -134,6 +136,7 @@ shopyro/
 │   ├── static-pages.config.ts   # Static page content
 │   └── seo.config.ts            # SEO configuration
 ├── lib/                         # Utility functions
+├── types/                       # TypeScript type definitions
 └── public/                      # Static assets
 ```
 
@@ -187,7 +190,7 @@ Use ngrok for local webhook testing:
 npm install -g ngrok
 
 # Run your app
-pnpm dev
+pnpm run dev
 
 # In another terminal
 ngrok http 3000
@@ -238,7 +241,7 @@ ngrok http 3000
 - **Deployment**: Vercel
 - **Package Manager**: pnpm
 
-## 💎 Support & Services
+## **💎 Support & services**: [Shopyro](https://shopyro.websyro.com)
 
 ### Support Tiers
 
@@ -282,6 +285,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
+- **Shopyro**: [Support](https://shopyro.websyro.com)
 - **Email**: hello@websyro.com
 - **LinkedIn**: [Follow Websyro](https://www.linkedin.com/company/websyro/)
 - **Twitter**: [Follow Twitter](https://twitter.com/joinwebsyro)
