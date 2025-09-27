@@ -42,6 +42,18 @@ Transform your Shopify store into a fast, modern headless e-commerce site with N
 ✅ **Static pages** (About, Contact, FAQ, Policies)  
 ✅ **SEO setup** (Meta, Open Graph, sitemap, robots.txt)
 
+## How a Shopify Store Works with Shopyro Headless Commerce Starter Kit/Template?
+
+Clearly explains how a Shopify store works with Shopyro Headless Commerce Starter Kit/Template, tailored for both technical and non-technical audiences.
+
+### For Non-Technical Person (Business Owner / Marketer)
+
+![For Non-Technical Person (Business Owner / Marketer)](./public/non-tech-view.png)
+
+### For Technical Person (Developer / Tech Team)
+
+![For Technical Person (Developer / Tech Team)](./public/tech-view.png)
+
 ## Quick Start
 
 ### Prerequisites
