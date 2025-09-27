@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to Shopyro! We welcome contributions from the community and are excited to see what you'll bring to this headless commerce template.
 
+📌**Note**: Shopyro is an independent project by Websyro. It is not affiliated with, endorsed by, or sponsored by Shopify Inc. “Shopify” is a trademark of Shopify Inc.
+
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)

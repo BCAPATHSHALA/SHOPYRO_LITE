@@ -6,6 +6,8 @@ Copyright (c) 2025 Websyro Agency
 - Website: https://websyro.com
 - Email: hello@websyro.com
 
+Note: Shopyro is an independent project by Websyro. It is not affiliated with, endorsed by, or sponsored by Shopify Inc. “Shopify” is a trademark of Shopify Inc.
+
 ## GRANT OF LICENSE
 
 Subject to the terms and conditions of this License, Websyro Agency ("Licensor") hereby grants you a non-exclusive, non-transferable license to use, modify, and distribute the Shopyro template ("Software") for commercial and non-commercial purposes, subject to the following conditions:
@@ -19,10 +21,13 @@ Subject to the terms and conditions of this License, Websyro Agency ("Licensor")
 
 ### RESTRICTIONS
 
-- ✗ You may NOT redistribute, resell, or sublicense the Software as a template or starter kit
-- ✗ You may NOT claim ownership of the original Software or remove copyright notices
+- ✗ You may NOT redistribute, resell, or use the Software in any competing template, starter kit, or marketplace.
 - ✗ You may NOT use "Shopyro" or "Websyro" trademarks without explicit permission
 - ✗ You may NOT create competing template marketplaces using this Software
+
+### ENTERPRISE & WHITE-LABEL LICENSE
+Enterprise licensing or white-label use is available upon request.
+Please contact hello@websyro.com for details.
 
 ## ATTRIBUTION
 
@@ -55,9 +60,13 @@ For licensing questions, custom development, or enterprise solutions:
 - Twitter: https://twitter.com/joinwebsyro
 - GitHub: https://github.com/BCAPATHSHALA/SHOPYRO_LITE
 
+## Termination
 This license is effective as of the date of purchase or download and remains
-in effect until terminated. Websyro Agency reserves the right to update this
+in effect until terminated. This license will automatically terminate if you
+fail to comply with its terms. Websyro Agency reserves the right to update this
 license for future versions of the Software.
 
 Last Updated: September 2025
-Version: 1.0
+Version: 1.0 (Commercial License)
+
+

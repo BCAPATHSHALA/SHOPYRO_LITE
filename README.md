@@ -12,9 +12,16 @@
 
 ![Websyro](./public/shopyro.png)
 
-Transform your Shopify store into a fast, modern headless e-commerce site with Next.js. Perfect for developers, tech-savvy entrepreneurs, or anyone wanting a custom, scalable, and responsive storefront.
+📌**Note**: Shopyro is an independent project by Websyro. It is not affiliated with, endorsed by, or sponsored by Shopify Inc. “Shopify” is a trademark of Shopify Inc.
 
-### **💎 Support & services**: [Shopyro](https://shopyro.websyro.com)
+## 🚀 Live Demo & Resources
+
+- **Landing Page**: [shopyro.websyro.com](https://shopyro.websyro.com)
+- **Demo Store**: [shopyrodemo.websyro.com](https://shopyrodemo.websyro.com)
+- **Documentation**: [websyro.com/docs/shopyro](https://www.websyro.com/docs/shopyro)
+- **Blog**: [How a Shopify store works with Shopyro](https://www.websyro.com/blog/how-a-shopify-store-works-with-shopyro-headless-commerce-starter-kit)
+
+Transform your Shopify store into a fast, modern headless e-commerce site with Next.js. Perfect for developers, tech-savvy entrepreneurs, or anyone wanting a custom, scalable, and responsive storefront.
 
 ## Features
 
@@ -273,7 +280,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Shopyro Commercial License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
